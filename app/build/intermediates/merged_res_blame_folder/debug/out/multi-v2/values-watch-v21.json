@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/hernan.cid/Documents/basic-android-kotlin-compose-training-affirmations/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml",
+            "outputFile": "/Users/catalinatapiafuentes/Desktop/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
-                    "source": "/Users/hernan.cid/.gradle/caches/transforms-3/81ccc4f9fde928c75264b65317f0ebeb/transformed/appcompat-1.2.0/res/values-watch-v21/values-watch-v21.xml",
+                    "source": "/Users/catalinatapiafuentes/.gradle/caches/transforms-3/93287c37db14033140abe303f7374d4d/transformed/appcompat-1.6.0/res/values-watch-v21/values-watch-v21.xml",
                     "from": {
                         "startLines": "2,6,10",
                         "startColumns": "4,4,4",
