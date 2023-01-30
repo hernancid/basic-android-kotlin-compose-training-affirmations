@@ -15,10 +15,14 @@
  */
 package com.example.affirmations
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -49,6 +53,13 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+fun showActivity(context:Context){
+    val intent= Intent (context, DetailActivity::class.java)
+    //Log.i("int", textValue.toString())
+    intent.putExtra( "exampleContent", "hola mundo")
+    context.startActivity(intent)
+}
+
 @Composable
 fun AffirmationApp() {
     val context = LocalContext.current
@@ -73,8 +84,9 @@ private fun AffirmationList(affirmationList: List<Affirmation>, modifier: Modifi
 
 @Composable
 fun AffirmationCard(affirmation: Affirmation, modifier: Modifier = Modifier) {
+    val context = LocalContext.current
     Card(modifier = modifier.padding(8.dp), elevation = 4.dp) {
-        Column {
+        Column (Modifier.clickable { showActivity(context) }){
             Image(
                 painter = painterResource(id = affirmation.imageResourceID),
                 modifier = Modifier
